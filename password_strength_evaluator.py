@@ -12,7 +12,6 @@ def password_length_status(Password_length):
          print("Your Password is very weak, Please make it strong")
    
 
-
 def check_strength(Password):
    has_digit=False
    # has_number=False
@@ -21,7 +20,6 @@ def check_strength(Password):
    upper=False
    Password_length=len(Password)
 
-   
    for character in Password:
       if character.isdigit():
          has_digit=True
@@ -32,25 +30,21 @@ def check_strength(Password):
       if character in special_characters:
          has_special_char=True
    
-   # requirement=has_digit and has_alphabets and has_special_char
 
    password_length_status(Password_length)
    
    if not has_digit:
-      # if Password_length>=12:
+   
          print("You don't have digit in your Password, please make sure to have it")
-      # else:
-         # print(f"{password_length_status(Password_length)} and also your password is  missing digit")
+    
    if not has_alphabets:
-      # if Password_length>=12:
+      
          print("You don't have alphabets in your Password, please make sure to have it")
-      # else:
-         # print(f"{password_length_status(Password_length)} and also your password is  missing alphabets")
+      
    if not has_special_char:
-      # if Password_length>=12:
+    
          print("You don't have special character in your Password, please make sure to have it")
-      # else:
-         # print(f"{password_length_status(Password_length)} and also your password is missing special character")
+      
 
    if not upper:
       print("It is good to have atleast one upper case letter,\
