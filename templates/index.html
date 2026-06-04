@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My Library</h1>
+    <ul>
+    {% if size==0 %}
+       Library is Empty
+    {% else %}
+        {% for book in books %}
+            <li>{{book['title']}} - {{book['author']}} - {{book['rating']}}/10</li>
+        {% endfor %}
+    {% endif %}
+    </ul>
+    <a href="./add">Add new book</a>
+</body>
+</html>

@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Built-in Functions Explained</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            color: #222;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #0d47a1;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #1565c0;
+            margin-top: 40px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #1976d2;
+            margin-top: 25px;
+        }
+
+        p {
+            font-size: 17px;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        code {
+            background: #eef2ff;
+            padding: 2px 5px;
+            border-radius: 4px;
+            color: #c2185b;
+        }
+
+        pre {
+            background: #1e1e1e;
+            color: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+
+        table th,
+        table td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #1565c0;
+            color: white;
+        }
+
+        .note {
+            background: #fff3cd;
+            padding: 15px;
+            border-left: 5px solid #ff9800;
+            margin-top: 15px;
+            border-radius: 6px;
+        }
+
+        .output {
+            background: #e8f5e9;
+            padding: 10px;
+            border-left: 5px solid #4caf50;
+            margin-top: 10px;
+            border-radius: 6px;
+        }
+
+        hr {
+            margin: 50px 0;
+            border: none;
+            border-top: 2px solid #ddd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Python Built-in Functions Explained</h1>
+
+        <p>
+            These functions are very important in Python.
+            They help you work faster and write cleaner code.
+        </p>
+
+        <p>This document explains:</p>
+
+        <ul>
+            <li>What each function does</li>
+            <li>Syntax</li>
+            <li>Different examples</li>
+            <li>Step-by-step explanation</li>
+            <li>Important notes</li>
+        </ul>
+
+        <hr>
+
+        <h2>1. len()</h2>
+
+        <h3>What is len()?</h3>
+
+        <p>
+            <code>len()</code> returns the number of items inside an object.
+        </p>
+
+        <p>It can work with:</p>
+
+        <ul>
+            <li>strings</li>
+            <li>lists</li>
+            <li>tuples</li>
+            <li>dictionaries</li>
+            <li>sets</li>
+        </ul>
+
+        <h3>Syntax</h3>
+
+        <pre>
+len(object)
+    </pre>
+
+        <h3>Example 1 — String Length</h3>
+
+        <pre>
+name = "Pajju"
+
+print(len(name))
+    </pre>
+
+        <div class="output">
+            Output: 5
+        </div>
+
+        <p>
+            The string "Pajju" contains 5 characters.
+        </p>
+
+        <h3>Example 2 — List Length</h3>
+
+        <pre>
+numbers = [10, 20, 30, 40]
+
+print(len(numbers))
+    </pre>
+
+        <div class="output">
+            Output: 4
+        </div>
+
+        <h3>Example 3 — Dictionary Length</h3>
+
+        <pre>
+student = {
+    "name": "Ram",
+    "age": 20,
+    "marks": 95
+}
+
+print(len(student))
+    </pre>
+
+        <div class="output">
+            Output: 3
+        </div>
+
+        <div class="note">
+            Spaces are also counted in strings.
+        </div>
+
+        <pre>
+text = "Hello World"
+
+print(len(text))
+    </pre>
+
+        <div class="output">
+            Output: 11
+        </div>
+
+        <hr>
+
+        <h2>2. sum()</h2>
+
+        <h3>What is sum()?</h3>
+
+        <p>
+            <code>sum()</code> adds all numbers in an iterable.
+        </p>
+
+        <h3>Syntax</h3>
+
+        <pre>
+sum(iterable)
+    </pre>
+
+        <h3>Example 1</h3>
+
+        <pre>
+numbers = [1, 2, 3, 4]
+
+print(sum(numbers))
+    </pre>
+
+        <div class="output">
+            Output: 10
+        </div>
+
+        <h3>Example 2 — Starting Value</h3>
+
+        <pre>
+numbers = [1, 2, 3]
+
+print(sum(numbers, 10))
+    </pre>
+
+        <div class="output">
+            Output: 16
+        </div>
+
+        <hr>
+
+        <h2>3. type()</h2>
+
+        <h3>What is type()?</h3>
+
+        <p>
+            <code>type()</code> tells the datatype of a variable.
+        </p>
+
+        <h3>Syntax</h3>
+
+        <pre>
+type(variable)
+    </pre>
+
+        <pre>
+x = 10
+
+print(type(x))
+    </pre>
+
+        <div class="output">
+            Output: &lt;class 'int'&gt;
+        </div>
+
+        <pre>
+name = "Python"
+
+print(type(name))
+    </pre>
+
+        <div class="output">
+            Output: &lt;class 'str'&gt;
+        </div>
+
+        <h3>Common Datatypes</h3>
+
+        <table>
+            <tr>
+                <th>Value</th>
+                <th>Type</th>
+            </tr>
+
+            <tr>
+                <td>10</td>
+                <td>int</td>
+            </tr>
+
+            <tr>
+                <td>10.5</td>
+                <td>float</td>
+            </tr>
+
+            <tr>
+                <td>"Hello"</td>
+                <td>str</td>
+            </tr>
+
+            <tr>
+                <td>[1,2]</td>
+                <td>list</td>
+            </tr>
+
+            <tr>
+                <td>(1,2)</td>
+                <td>tuple</td>
+            </tr>
+
+            <tr>
+                <td>{"a":1}</td>
+                <td>dict</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h2>4. max()</h2>
+
+        <p>
+            <code>max()</code> returns the largest value.
+        </p>
+
+        <pre>
+numbers = [10, 50, 20]
+
+print(max(numbers))
+    </pre>
+
+        <div class="output">
+            Output: 50
+        </div>
+
+        <pre>
+print(max(5, 8, 2))
+    </pre>
+
+        <div class="output">
+            Output: 8
+        </div>
+
+        <pre>
+print(max("apple"))
+    </pre>
+
+        <div class="output">
+            Output: p
+        </div>
+
+        <hr>
+
+        <h2>5. min()</h2>
+
+        <p>
+            <code>min()</code> returns the smallest value.
+        </p>
+
+        <pre>
+numbers = [5, 2, 9, 1]
+
+print(min(numbers))
+    </pre>
+
+        <div class="output">
+            Output: 1
+        </div>
+
+        <hr>
+
+        <h2>6. id()</h2>
+
+        <p>
+            <code>id()</code> returns the unique memory address of an object.
+        </p>
+
+        <pre>
+x = 10
+
+print(id(x))
+    </pre>
+
+        <div class="output">
+            Output will differ on every computer.
+        </div>
+
+        <hr>
+
+        <h2>7. dir()</h2>
+
+        <p>
+            <code>dir()</code> shows all properties and methods available in an object.
+        </p>
+
+        <pre>
+print(dir(str))
+    </pre>
+
+        <div class="output">
+            Output: ['capitalize', 'lower', 'upper', 'split']
+        </div>
+
+        <hr>
+
+        <h2>8. help()</h2>
+
+        <p>
+            <code>help()</code> shows documentation about functions, classes, and modules.
+        </p>
+
+        <pre>
+help(len)
+    </pre>
+
+        <hr>
+
+        <h2>9. sorted()</h2>
+
+        <p>
+            <code>sorted()</code> returns a sorted version of data.
+        </p>
+
+        <pre>
+numbers = [4, 1, 3, 2]
+
+print(sorted(numbers))
+    </pre>
+
+        <div class="output">
+            Output: [1, 2, 3, 4]
+        </div>
+
+        <pre>
+print(sorted(numbers, reverse=True))
+    </pre>
+
+        <div class="output">
+            Output: [4, 3, 2, 1]
+        </div>
+
+        <hr>
+
+        <h2>10. enumerate()</h2>
+
+        <p>
+            <code>enumerate()</code> adds index numbers while looping.
+        </p>
+
+        <pre>
+fruits = ["apple", "banana", "mango"]
+
+for index, fruit in enumerate(fruits):
+    print(index, fruit)
+    </pre>
+
+        <div class="output">
+            0 apple <br>
+            1 banana <br>
+            2 mango
+        </div>
+
+        <hr>
+
+        <h2>11. zip()</h2>
+
+        <p>
+            <code>zip()</code> combines multiple iterables together.
+        </p>
+
+        <pre>
+names = ["Ram", "Sam"]
+marks = [90, 80]
+
+result = zip(names, marks)
+
+print(list(result))
+    </pre>
+
+        <div class="output">
+            [('Ram', 90), ('Sam', 80)]
+        </div>
+
+        <hr>
+
+        <h2>12. map()</h2>
+
+        <p>
+            <code>map()</code> applies a function to every item.
+        </p>
+
+        <pre>
+numbers = [1, 2, 3, 4]
+
+def square(x):
+    return x * x
+
+result = map(square, numbers)
+
+print(list(result))
+    </pre>
+
+        <div class="output">
+            [1, 4, 9, 16]
+        </div>
+
+        <hr>
+
+        <h2>13. filter()</h2>
+
+        <p>
+            <code>filter()</code> filters items based on condition.
+        </p>
+
+        <pre>
+numbers = [1, 2, 3, 4, 5, 6]
+
+def even(x):
+    return x % 2 == 0
+
+result = filter(even, numbers)
+
+print(list(result))
+    </pre>
+
+        <div class="output">
+            [2, 4, 6]
+        </div>
+
+        <hr>
+
+        <h2>14. any()</h2>
+
+        <p>
+            <code>any()</code> returns True if at least ONE value is true.
+        </p>
+
+        <pre>
+numbers = [False, False, True]
+
+print(any(numbers))
+    </pre>
+
+        <div class="output">
+            True
+        </div>
+
+        <hr>
+
+        <h2>15. all()</h2>
+
+        <p>
+            <code>all()</code> returns True only if ALL values are true.
+        </p>
+
+        <pre>
+numbers = [True, True, True]
+
+print(all(numbers))
+    </pre>
+
+        <div class="output">
+            True
+        </div>
+
+        <hr>
+
+        <h2>Summary Table</h2>
+
+        <table>
+            <tr>
+                <th>Function</th>
+                <th>Purpose</th>
+            </tr>
+
+            <tr>
+                <td>len()</td>
+                <td>Count items</td>
+            </tr>
+
+            <tr>
+                <td>sum()</td>
+                <td>Add numbers</td>
+            </tr>
+
+            <tr>
+                <td>type()</td>
+                <td>Check datatype</td>
+            </tr>
+
+            <tr>
+                <td>max()</td>
+                <td>Largest value</td>
+            </tr>
+
+            <tr>
+                <td>min()</td>
+                <td>Smallest value</td>
+            </tr>
+
+            <tr>
+                <td>id()</td>
+                <td>Memory identity</td>
+            </tr>
+
+            <tr>
+                <td>dir()</td>
+                <td>Show methods</td>
+            </tr>
+
+            <tr>
+                <td>help()</td>
+                <td>Documentation</td>
+            </tr>
+
+            <tr>
+                <td>sorted()</td>
+                <td>Sort values</td>
+            </tr>
+
+            <tr>
+                <td>enumerate()</td>
+                <td>Add index while looping</td>
+            </tr>
+
+            <tr>
+                <td>zip()</td>
+                <td>Combine iterables</td>
+            </tr>
+
+            <tr>
+                <td>map()</td>
+                <td>Apply function</td>
+            </tr>
+
+            <tr>
+                <td>filter()</td>
+                <td>Filter items</td>
+            </tr>
+
+            <tr>
+                <td>any()</td>
+                <td>At least one True</td>
+            </tr>
+
+            <tr>
+                <td>all()</td>
+                <td>All must be True</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</body>
+
+</html>
